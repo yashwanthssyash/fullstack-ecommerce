@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Olivia Signup Section</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/olivia.ico">
+</head>
+<style>
+    body{
+            font-family: cursive;
+            background-image:url("./anotherfinal.jpg");
+            background-repeat: no-repeat;
+        }
+        .dis{
+            width: 40%;
+            height: 300px;
+            margin: 8% auto;
+            border: 1px solid black;
+        }
+        .sign{
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+       #submit{
+        padding: 3% 5%;
+        border: 0px ;
+        background-color: aquamarine;
+        border-radius: 7px;
+        display: block;
+        margin: auto;
+        font-size: medium;
+       }
+       #submit:hover{
+        background-color: aqua;
+        color: coral;
+        cursor: pointer;
+       }
+</style>
+<body>
+    <h2>Welcome TO Sign Up Section </h2>
+    <div class="dis">
+        <div class="sign">
+            <form action="">
+                <label for="Firstname">Firstname</label>
+                <input type="text" required="reuired" id="firstname"><br><br>
+                <label for="lastname">Last Name</label>
+                <input type="text" required="required" id="lastname"><br><br>
+                <label for="email">Email</label>
+                <input type="email" required="required" id="email"><br><br>
+                <label for="password">Password</label>
+                <input type="password" id="password" required="required"><br><br>
+                <input id="submit" type="submit">
+            </form>
+        </div>
+    </div>
+    
+</body>
+
+<script>
+    document.querySelector(".sign form").addEventListener("submit",(event)=>{
+        event.preventDefault();
+        let input = document.querySelectorAll(".sign input");
+        let obj={};
+        for (let i=0;i<input.length-1;i++){
+            obj[input[i].id]=input[i].value;
+        }
+        backend_sign(obj);
+    })
+
+    async function backend_sign(data){
+        let res = await fetch("https://dull-lime-ant-gown.cyclic.app/user/signup",{
+            method:"POST",
+            headers:{
+                "Content-Type":"application/json",
+            },
+            body:JSON.stringify(data),
+        })
+        let response=await res.json();
+        if (response=="User Added"){
+            alert("Sign Up Succesful");
+            window.location.href="login.html";
+        }
+        else {
+            alert(response);
+        }
+    }
+</script>
+</html>

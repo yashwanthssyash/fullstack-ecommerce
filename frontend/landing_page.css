@@ -1,0 +1,240 @@
+.navbar a{
+  text-decoration: none;
+  color: black;
+}
+
+.top_navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.logo{
+    width: 17%;
+}
+
+.search_bar{
+    padding: 5% 10%;
+    font-size:larger;
+    font-family: cursive;
+    border: 1px solid black;
+    border-radius: 20px 0px 20px 0px ;
+
+}
+#search_button{
+    font-size: medium;
+    padding: 1% 3% ;
+    font-size: medium;
+    font-family: cursive;
+    border-radius: 5px;
+    font-style: italic;
+    background-color: rgb(250, 248, 246);
+    border: 0px;
+
+}
+
+#search_button:hover{
+    background-color: aqua;
+}
+
+.lower_navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom:1px solid black;
+}
+
+.lower_navbar>div{
+    width: 30%;
+}
+.lower_navbar>div:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.upper_body{
+    width: 95%;
+    margin: auto;
+}
+.upper_body img{
+    margin: 15px auto 15px auto;
+    width: 100%;
+}
+.daily_deals{
+    display: flex;
+    justify-content: space-evenly;
+}
+.bed_sheet{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.suit_case{
+    display:grid ;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+}
+.summer_waves{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10fr;
+}
+.shorts{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 15px;
+}
+.rings{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+.category{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    text-align: center;
+}
+.category strong{
+    width: fit-content;
+    padding: 0.5%;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(236, 247, 243);
+    margin: 2%;
+}
+.love_for_all{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 10px;
+}
+.lower{
+    width: 95%;
+    margin: auto;
+    padding-bottom: 5%;
+}
+.lower img{
+    width: 100%;
+}
+.tag{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.category{
+    display: flex;
+}
+.category button{
+    flex: 1;
+    padding: 10px;
+    font-size: 15px;
+}
+
+
+.footer{
+    width: 85%;
+    margin: auto;
+    border-top: 1px solid black;
+    display: flex;
+    justify-content: space-between;
+}
+.footer div{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+#login{
+    padding: 0.5% 1%;
+    border-radius: 5px;
+    background-color: aquamarine;
+    font-size: medium;
+    font-family: cursive;
+ }
+ #signup{
+     padding: 0.5% 1%;
+    border-radius: 5px;
+    background-color: aquamarine;
+    font-size: medium;
+    font-family: cursive;
+ }
+ #cart{
+     padding: 0.5% 1%;
+    border-radius: 5px;
+    background-color: aquamarine;
+    font-size: medium;
+    font-family: cursive;
+ }
+
+@media all and (min-width:450px) and (max-width:750px){
+    .daily_deals{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        gap: 5px;
+    }
+    .category{
+        display: none;
+    }
+    .suit_case{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .summer_waves{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .shorts{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .tag{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .footer h2{
+        margin: 0px;
+        padding: 0px;
+    }
+    
+}
+
+@media all and (min-width:1px) and (max-width:449px){
+    .navabar{
+        width: 100%;
+    }
+    .daily_deals{
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 2px;
+    }
+    .category{
+        display: none;
+    }
+    .suit_case{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .summer_waves{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .shorts{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    .tag{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+    }
+    .footer h2{
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .search_bar{
+        padding: 5px 15px;
+        font-size:small;
+        font-family: cursive;
+        border: 1px solid black;
+        
+    
+    }
+}

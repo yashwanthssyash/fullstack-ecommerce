@@ -1,0 +1,168 @@
+body{
+    font-family:cursive;
+}
+
+
+.top_navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+}
+.search_bar{
+    padding: 15px 60px;
+    font-size:larger;
+    font-family: cursive;
+    border: 1px solid black;
+    border-radius: 20px 0px 20px 0px ;
+
+}
+#search_button{
+    border-radius: 5px;
+    padding: 10px ;
+    font-style: italic;
+    background-color: rgb(250, 248, 246);
+    border: 0px;
+
+}
+#search_button:hover{
+    background-color: aqua;
+}
+
+.logo{
+    width: 17%;
+}
+.lower_navbar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom:1px solid black;
+}
+
+.lower_navbar>div{
+    width: 30%;
+}
+.lower_navbar>div:nth-child(2){
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+    /* login signup Css */
+.dropdown {
+    position: relative;
+    display: inline-block;
+    cursor:grab;
+  }
+  .dropdown button{
+    border: 0px;
+    font-size: medium;
+    padding: 15px;
+ }
+ .dropdown button:hover{
+    background-color: aquamarine;
+ }
+
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: flex;
+    flex-direction: column;
+    
+  }
+
+/* login signup Css */
+#login{
+   padding: 0.5% 1%;
+   border-radius: 5px;
+   background-color: aquamarine;
+   font-size: medium;
+   font-family: cursive;
+}
+#signup{
+    padding: 0.5% 1%;
+   border-radius: 5px;
+   background-color: aquamarine;
+   font-size: medium;
+   font-family: cursive;
+}
+#cart{
+    padding: 0.5% 1%;
+   border-radius: 5px;
+   background-color: aquamarine;
+   font-size: medium;
+   font-family: cursive;
+}
+
+.display{
+    width: 90%;
+    margin: auto;
+    margin-top: 5%;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 1%;
+    font-family: cursive;
+}
+.display div{
+    width: 100%;
+    text-align: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.display div>button{
+    padding: 5px;
+    font-size: medium;
+    border-radius: 5px;
+    background-color:seagreen;
+    font-family: Arial, Helvetica, sans-serif;
+    border: 0px;
+    color: antiquewhite;
+}
+
+@media all and (min-width:450px) and (max-width:750px){
+    .display{
+        display:grid ;
+        grid-template-columns: repeat(2,1fr);
+        gap: 0.3%;
+    }
+    .display div{
+        width: 80%;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .display img{
+        width: 100%;
+    }
+}
+
+@media all and (min-width:1px) and (max-width:449px){
+    .display{
+        display:grid ;
+        grid-template-columns:1fr;
+        gap: 0.3%;
+    }
+    .display div{
+        width: 80%;
+        text-align: center;
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    }
+    .display img{
+        width: 100%;
+    }
+    .navabar{
+        width: 90%;
+    }
+    .search_bar{
+        padding: 5px 15px;
+        font-size:small;
+        font-family: cursive;
+        border: 1px solid black;
+        
+    
+    }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Olivia Fashion & Boutique</title>
+    <link rel="shortcut icon" type="image/x-icon" href="/olivia.ico">
+</head>
+<link rel="stylesheet" href="./admin.css">
+<body>
+
+    <div id="password_prompt">
+        <form>
+            <label for="email">Enter Email</label>
+            <input type="email" id="email"><br>
+          <label for="password">Enter password:</label>
+          <input type="password" id="password" name="password"><br>
+          <button type="submit">Submit</button>
+        </form>
+    </div>
+
+
+    <div id="website_content">
+        <div class="navbar">
+            <img src="./Initial Fashion Logo2.jpg" alt="">
+            <button>
+                Add Products
+            </button>
+            <button>
+                View Orders
+            </button>
+            <button id="update">
+                Update Products
+            </button>
+        </div>
+
+        <div class="display">
+            <form action="">
+                <label for="img">Image Link</label>
+                <input type="text" id="img" required="required"><br><br>
+                <label for="title">Title</label>
+                <input type="text" id="title" required="required"><br><br>
+                <label for="description">Description</label>
+                <input type="text" id="description" required="required"><br><br>
+                <label for="price">Price</label>
+                <input type="text" id="price" required="required"><br><br>
+                <select name="category" id="category">
+                    <option value="female">Female</option>
+                    <option value="male">Male</option>
+                    <option value="update">Update</option>
+                </select>
+                <input type="submit">
+            </form>
+        </div>
+        <div class="product"></div>
+    </div>
+
+    
+    
+</body>
+<script src="./admin.js"></script>
+</html>
